@@ -12,7 +12,30 @@
     <jsp:include page="../header.jsp"></jsp:include>
     <jsp:include page="../menu.jsp"></jsp:include>
     
-    <div class="page-title">Album List</div>
+    <div class="page-title" align="center">
+        <h1>Album List</h1>
+        <h3>
+            <a href="newAlbum">New Employee</a>
+        </h3>
+        <table border="1">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+ 
+            <c:forEach var="album" items="${listAlbums}">
+                <tr>
+ 
+                    <td>${album.id}</td>
+                    <td>${album.name}</td>
+                    <td>${album.price}</td>
+                    <td><a href="editEmployee?id=${album.id}">Edit</a>
+                             <a
+                        href="deleteEmployee?id=${album.id}">Delete</a></td>
+ 
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
     
     <jsp:include page="../footer.jsp"></jsp:include>
 </body>
