@@ -24,14 +24,13 @@
  
             <c:forEach var="album" items="${listAlbums}">
                 <tr>
- 
                     <td>${album.id}</td>
                     <td>${album.name}</td>
                     <td>${album.price}</td>
-                    <td><a href="editEmployee?id=${album.id}">Edit</a>
-                             <a
-                        href="deleteEmployee?id=${album.id}">Delete</a></td>
- 
+                    <td>
+                        <a href="editEmployee?id=${album.id}">Edit</a>
+                        <a href="deleteEmployee?id=${album.id}">Delete</a>
+                    </td>
                 </tr>
             </c:forEach>
         </table>

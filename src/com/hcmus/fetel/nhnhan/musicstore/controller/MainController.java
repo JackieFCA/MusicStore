@@ -46,6 +46,6 @@ public class MainController {
         } else {
             albumService.updateAlbum(album);
         }
-        return "redirect:/";
+        return "redirect:/albums";
     }
 }
